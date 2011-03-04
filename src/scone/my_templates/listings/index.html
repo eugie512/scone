@@ -1,0 +1,9 @@
+<h1>Listings in Your Area</h1>
+{% if latest_listings %}
+    {% for listing in latest_listings %}
+        <a href="/listings/{{ listing.id }}/">{{ listing.title }}</a><br/>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No polls are available.</p>
+{% endif %}
